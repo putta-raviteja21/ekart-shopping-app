@@ -1,3 +1,4 @@
+require("dotenv").config();
 require("./config/db");
 
 const express = require("express");
@@ -9,23 +10,32 @@ const orderRoutes = require("./routes/orderRoutes");
 
 const app = express();
 
+// Middleware
 app.use(cors());
 app.use(express.json());
 
-// Auth Routes
+// Routes
 app.use("/api/auth", authRoutes);
-
-// Product Routes
 app.use("/api/products", productRoutes);
-
-// Order Routes
 app.use("/api/orders", orderRoutes);
 
-// Test Route
+// Home Route
 app.get("/", (req, res) => {
-  res.send("Backend Running");
+  res.send("🚀 Ekart Backend is Running Successfully!");
 });
 
-app.listen(5000, () => {
-  console.log("Server running on port 5000");
+// Handle Unknown Routes
+app.use((req, res) => {
+  res.status(404).json({
+    success: false,
+    message: "Route not found",
+  });
+});
+
+// Server Port
+const PORT = process.env.PORT || 5000;
+
+// Start Server
+app.listen(PORT, () => {
+  console.log(`✅ Server running on port ${PORT}`);
 });
