@@ -1,0 +1,25 @@
+import "./ProductCard.css";
+
+function ProductCard({ product }) {
+
+  return (
+    <div className="card">
+
+      <img
+        src={product.image}
+        alt={product.name}
+      />
+
+      <h3>{product.name}</h3>
+
+      <p>{product.price}</p>
+
+      <button>
+        Add To Cart
+      </button>
+
+    </div>
+  );
+}
+
+export default ProductCard;

@@ -1,0 +1,39 @@
+.success-page{
+  width: 100%;
+  height: 100vh;
+  background-color: #f1f3f6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.success-card{
+  background-color: white;
+  padding: 50px;
+  border-radius: 10px;
+  text-align: center;
+  width: 400px;
+}
+
+.success-card h1{
+  font-size: 70px;
+}
+
+.success-card h2{
+  margin: 20px 0;
+}
+
+.success-card p{
+  color: gray;
+}
+
+.success-card button{
+  margin-top: 25px;
+  padding: 14px 30px;
+  border: none;
+  background-color: #2874f0;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}

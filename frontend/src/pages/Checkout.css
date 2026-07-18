@@ -1,0 +1,64 @@
+.checkout-page{
+  width: 100%;
+  min-height: 100vh;
+  background-color: #f1f3f6;
+  padding: 30px;
+}
+
+.checkout-container{
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 20px;
+}
+
+.address-section,
+.summary-section{
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.address-section{
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.address-section input,
+.address-section textarea{
+  padding: 14px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+}
+
+.address-section textarea{
+  height: 120px;
+  resize: none;
+}
+
+.summary-item{
+  display: flex;
+  justify-content: space-between;
+  margin: 15px 0;
+}
+
+.summary-section button{
+  width: 100%;
+  padding: 14px;
+  margin-top: 20px;
+  border: none;
+  background-color: #fb641b;
+  color: white;
+  border-radius: 5px;
+  font-size: 17px;
+  cursor: pointer;
+}
+
+@media(max-width:768px){
+
+  .checkout-container{
+    grid-template-columns: 1fr;
+  }
+
+}
